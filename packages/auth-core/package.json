@@ -1,0 +1,72 @@
+{
+  "name": "@franciscodlxdev/capacitor-auth-core",
+  "version": "0.1.0",
+  "description": "OAuth 2.0 + PKCE in the system browser for Capacitor and Ionic: the core of the social login family",
+  "main": "dist/plugin.cjs.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "unpkg": "dist/plugin.js",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/plugin.cjs.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "android/src/main/",
+    "android/build.gradle",
+    "dist/",
+    "ios/Sources",
+    "Package.swift",
+    "FranciscodlxdevCapacitorAuthCore.podspec",
+    "!**/__tests__",
+    "!**/__fixtures__"
+  ],
+  "author": "Francisco (https://github.com/franciscodlx)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscodlx/capacitor-social-login.git",
+    "directory": "packages/auth-core"
+  },
+  "bugs": {
+    "url": "https://github.com/franciscodlx/capacitor-social-login/issues"
+  },
+  "homepage": "https://github.com/franciscodlx/capacitor-social-login/tree/main/packages/auth-core#readme",
+  "keywords": [
+    "capacitor",
+    "capacitor-plugin",
+    "ionic",
+    "oauth",
+    "oauth2",
+    "pkce",
+    "oidc",
+    "social-login"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && rollup -c rollup.config.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@capacitor/core": "^8.6.2",
+    "rollup": "^4.53.2"
+  },
+  "peerDependencies": {
+    "@capacitor/core": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  }
+}

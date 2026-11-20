@@ -1,0 +1,17 @@
+.providers {
+  display: grid;
+  gap: 4px;
+  margin: 12px 0 16px;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.mono {
+  font-family: ui-monospace, Menlo, monospace;
+  display: grid;
+  gap: 4px;
+}

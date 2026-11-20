@@ -1,0 +1,15 @@
+packages:
+  - 'packages/*'
+  - 'examples/*'
+  - 'tools/*'
+
+# Install scripts we do not need: these ship prebuilt binaries.
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: false
+  lmdb: false
+  msgpackr-extract: false
+
+# Capacitor's CLI, Gradle and SPM resolve plugins through node_modules paths:
+# a flat layout keeps them where they expect.
+nodeLinker: hoisted

@@ -1,0 +1,41 @@
+.DS_Store
+.vscode/
+.idea/
+
+# Node
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Angular / Ionic
+.angular/
+www/
+
+# iOS
+Pods/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+.build/
+.swiftpm/
+Package.resolved
+examples/*/ios/App/App/public/
+examples/*/ios/App/App/capacitor.config.json
+examples/*/ios/App/App/config.xml
+
+# Android
+.gradle/
+build/
+local.properties
+*.iml
+.cxx/
+examples/*/android/app/src/main/assets/public/
+examples/*/android/app/src/main/assets/capacitor.config.json
+examples/*/android/app/src/main/assets/capacitor.plugins.json
+examples/*/android/app/src/main/res/xml/config.xml
+
+# Secrets
+.env
+.env.*
+!.env.example
