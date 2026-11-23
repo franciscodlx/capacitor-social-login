@@ -9,6 +9,26 @@
     Providers without a client ID in src/app/config.ts use the local mocks.
   </ion-note>
 
+  @switch (session().status) { @case ('working') {
+  <div class="status"><ion-spinner /></div>
+  } @case ('failed') { @if (session(); as s) { @if (s.status === 'failed') {
+  <ion-text color="danger"
+    ><p id="error" class="status">{{ s.message }}</p></ion-text
+  >
+  } } } @case ('done') { @if (session(); as s) { @if (s.status === 'done') {
+  <ion-card id="result">
+    <ion-card-content class="mono">
+      <ion-text color="success"
+        ><strong>SIGNED IN ({{ s.result.provider }})</strong></ion-text
+      >
+      <div>id: {{ s.result.id }}</div>
+      <div>name: {{ s.result.name }}</div>
+      <div>username: {{ s.result.username }}</div>
+      <div>email: {{ s.result.email }}</div>
+    </ion-card-content>
+  </ion-card>
+  } } } }
+
   <div class="providers">
     @for (provider of providers; track provider.id) {
     <ion-button
@@ -80,23 +100,4 @@
     </ion-card-content>
   </ion-card>
 
-  @switch (session().status) { @case ('working') {
-  <div class="status"><ion-spinner /></div>
-  } @case ('failed') { @if (session(); as s) { @if (s.status === 'failed') {
-  <ion-text color="danger"
-    ><p id="error" class="status">{{ s.message }}</p></ion-text
-  >
-  } } } @case ('done') { @if (session(); as s) { @if (s.status === 'done') {
-  <ion-card id="result">
-    <ion-card-content class="mono">
-      <ion-text color="success"
-        ><strong>SIGNED IN ({{ s.result.provider }})</strong></ion-text
-      >
-      <div>id: {{ s.result.id }}</div>
-      <div>name: {{ s.result.name }}</div>
-      <div>username: {{ s.result.username }}</div>
-      <div>email: {{ s.result.email }}</div>
-    </ion-card-content>
-  </ion-card>
-  } } } }
 </ion-content>
