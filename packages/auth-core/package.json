@@ -1,6 +1,6 @@
 {
   "name": "@franciscodlxdev/capacitor-auth-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "OAuth 2.0 + PKCE in the system browser for Capacitor and Ionic: the core of the social login family",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
